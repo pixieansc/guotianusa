@@ -1,5 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #FDFDFD;
+    background: white;
 }
 
 .sidebar {
@@ -23,7 +29,7 @@ nav a {
     display: block;
     color: #848C8E;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 30px;
 }
 
@@ -37,16 +43,24 @@ nav a:hover {
 }
 
 .main {
-    font-family: Mulish, sans-serif;
-    flex-grow: 1;
     margin-left: 240px;
-    padding: 40px;
-    background-color: #FDFDFD;
-    color: #402E2A;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
-.main > * { /*targets children of main div !*/
-    margin: 15px;
+.main > * {
+    margin: 40px;
+}
+
+.scroll {
+    position: sticky;
+    top: 0;
+    height: 100%;
 }
 
 .red-div {
@@ -64,6 +78,10 @@ nav a:hover {
 }
 
 .white-div {
+    background-color: white;
+    color: #473935;
+    border-radius: 8px;
+
     padding: 60px 40px;
     text-align: center;
     display: flex;
@@ -73,11 +91,41 @@ nav a:hover {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3{
     font-family: Ovo, serif;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     margin-bottom: 30px;
+}
+
+blockquote { /* quote !*/
+    display: inline-block;
+    padding: 20px 10px 0 50px;
+    position: relative;
+    font-size: 30px;
+    line-height: 1.5; /* space in between lines of text */
+    font-family: Ovo, serif;
+    color: #FDFDFD;
+}
+
+blockquote::before { /* adds quote icon in blockquote  */
+    content: "“";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    font-size: 8rem;
+    line-height: 1;
+    color: rgba(255,255,255,0.4);
+}
+
+
+h3 {
+    font-size: 21px;
+}
+
+p {
+    font-family: Mulish, sans-serif;
+    font-weight: 667;
 }
 
 .section-content {
@@ -101,6 +149,7 @@ h1, h2, h3 {
 }
 
 .photo-div {
+    flex-shrink: 0;
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -114,7 +163,9 @@ h1, h2, h3 {
 }
 
 .photo-text {
-    background-color: rgb(196, 55, 55, 0.2);
+    background-color: rgb(132, 140, 142, 0.4);
+    padding-left: 100px;
+    padding-right: 100px;
     border-radius: 10px;
     width: 100%;
     height: 100%;
@@ -126,13 +177,12 @@ h1, h2, h3 {
 
 .footer {
     text-align: center;
-    padding: 40px 20px;
     font-size: 14px;
     letter-spacing: 2px;
-    color: #402E2A;
+    color: #473935;
     background-color: #FDFDFD;
+    padding-top: 25px;
     border-top: 1px solid #E0E0E0;
-    margin-top: 60px;
 }
 
 /* animated button time! */
