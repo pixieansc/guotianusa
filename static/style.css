@@ -42,6 +42,20 @@ nav a:hover {
     color: #C43737;
 }
 
+.language {
+    display: inline-block;
+    align-self: flex-end;
+    padding: 8px 12px;
+    border-radius: 15px;
+    border: 2px solid #C43737;
+
+    color: #C43737;
+    font-family: Ovo, serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+}
+
 .main {
     margin-left: 240px;
     height: 100vh;
@@ -125,7 +139,7 @@ h3 {
 
 p {
     font-family: Mulish, sans-serif;
-    font-weight: 667;
+    font-weight: 500;
 }
 
 .section-content {
@@ -149,6 +163,7 @@ p {
 }
 
 .photo-div {
+    margin-top: 0;
     flex-shrink: 0;
     background-size: cover;
     background-position: center;
