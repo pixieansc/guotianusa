@@ -103,6 +103,7 @@ nav a:hover {
     color: #FDFDFD;
     border-radius: 8px;
 
+    min-height: 330px;
     padding: 60px 40px;
     flex-wrap: wrap;
     text-align: center;
@@ -116,6 +117,7 @@ nav a:hover {
     color: #473935;
     border-radius: 8px;
 
+    min-height: 330px;
     padding: 60px 40px;
     text-align: center;
     display: flex;
@@ -166,6 +168,7 @@ p {
     flex-direction: row;
     flex-wrap: nowrap;
     flex-shrink: 1;
+    align-items: center;
     gap: 40px;
 }
 
@@ -199,7 +202,7 @@ p {
 
 .photo-text {
     padding: 0 20px;
-    background-color: rgb(132, 140, 142, 0.4);
+    background-color: rgb(132, 140, 142, 0.2);
     border-radius: 10px;
     width: 100%;
     height: 100%;
